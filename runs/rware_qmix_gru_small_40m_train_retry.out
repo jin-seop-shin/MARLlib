@@ -1,0 +1,328 @@
+/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/redis/utils.py:29: CryptographyDeprecationWarning: Python 3.8 is no longer supported by the Python core team and support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.8.
+  import cryptography  # noqa
+2026-05-22 22:34:41,092	WARNING utils.py:531 -- Ray currently does not support initializing Raywith fractional cpus. Your num_cpus will be truncated from 8.5 to 8.
+2026-05-22 22:34:42,545	ERROR syncer.py:75 -- Log sync requires rsync to be installed.
+verified rware-small-4ag-v2
+== Status ==
+Current time: 2026-05-22 22:34:54 (running for 00:00:11.72)
+Memory usage on this node: 62.4/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:34:55 (running for 00:00:12.73)
+Memory usage on this node: 62.4/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:00 (running for 00:00:17.73)
+Memory usage on this node: 63.4/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:05 (running for 00:00:22.74)
+Memory usage on this node: 63.6/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:10 (running for 00:00:27.74)
+Memory usage on this node: 63.7/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:15 (running for 00:00:32.75)
+Memory usage on this node: 63.9/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:20 (running for 00:00:37.75)
+Memory usage on this node: 64.0/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:25 (running for 00:00:42.76)
+Memory usage on this node: 64.1/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:30 (running for 00:00:47.76)
+Memory usage on this node: 64.2/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+[2m[36m(pid=990076)[0m 2026-05-22 22:34:45,149	WARNING deprecation.py:38 -- DeprecationWarning: `simple_optimizer` has been deprecated. This will raise an error in the future!
+[2m[36m(pid=990076)[0m 2026-05-22 22:34:45,149	INFO dqn.py:142 -- In multi-agent mode, policies will be optimized sequentially by the multi-GPU optimizer. Consider setting simple_optimizer=True if this doesn't work for you.
+[2m[36m(pid=990076)[0m 2026-05-22 22:34:45,149	INFO trainer.py:770 -- Current log_level is WARN. For more information, set 'log_level': 'INFO' / 'DEBUG' or use the -v and -vv flags.
+[2m[36m(pid=990076)[0m 2026-05-22 22:34:53,990	WARNING deprecation.py:38 -- DeprecationWarning: `simple_optimizer` has been deprecated. This will raise an error in the future!
+[2m[36m(pid=990077)[0m /workspace/MARLlib/marllib/marl/algos/core/VD/iql_vdn_qmix.py:482: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+[2m[36m(pid=990077)[0m   k: torch.as_tensor(v, device=self.device)
+[2m[36m(pid=990073)[0m /workspace/MARLlib/marllib/marl/algos/core/VD/iql_vdn_qmix.py:482: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+[2m[36m(pid=990073)[0m   k: torch.as_tensor(v, device=self.device)
+[2m[36m(pid=990079)[0m /workspace/MARLlib/marllib/marl/algos/core/VD/iql_vdn_qmix.py:482: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+[2m[36m(pid=990079)[0m   k: torch.as_tensor(v, device=self.device)
+[2m[36m(pid=990078)[0m /workspace/MARLlib/marllib/marl/algos/core/VD/iql_vdn_qmix.py:482: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+[2m[36m(pid=990078)[0m   k: torch.as_tensor(v, device=self.device)
+[2m[36m(pid=990075)[0m /workspace/MARLlib/marllib/marl/algos/core/VD/iql_vdn_qmix.py:482: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+[2m[36m(pid=990075)[0m   k: torch.as_tensor(v, device=self.device)
+[2m[36m(pid=990074)[0m /workspace/MARLlib/marllib/marl/algos/core/VD/iql_vdn_qmix.py:482: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:189.)
+[2m[36m(pid=990074)[0m   k: torch.as_tensor(v, device=self.device)
+[2m[36m(pid=990076)[0m 2026-05-22 22:34:54,045	WARNING util.py:57 -- Install gputil for GPU system monitoring.
+[2m[36m(pid=990077)[0m /workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/gymnasium/utils/passive_env_checker.py:245: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+[2m[36m(pid=990077)[0m   logger.warn(
+[2m[36m(pid=990073)[0m /workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/gymnasium/utils/passive_env_checker.py:245: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+[2m[36m(pid=990073)[0m   logger.warn(
+[2m[36m(pid=990079)[0m /workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/gymnasium/utils/passive_env_checker.py:245: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+[2m[36m(pid=990079)[0m   logger.warn(
+[2m[36m(pid=990078)[0m /workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/gymnasium/utils/passive_env_checker.py:245: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+[2m[36m(pid=990078)[0m   logger.warn(
+[2m[36m(pid=990075)[0m /workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/gymnasium/utils/passive_env_checker.py:245: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+[2m[36m(pid=990075)[0m   logger.warn(
+[2m[36m(pid=990074)[0m /workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/gymnasium/utils/passive_env_checker.py:245: UserWarning: [33mWARN: The reward returned by `step()` must be a float, int, np.integer or np.floating, actual type: <class 'list'>[0m
+[2m[36m(pid=990074)[0m   logger.warn(
+[2m[36m(pid=990076)[0m 2026-05-22 22:35:00,727	WARNING replay_buffer.py:68 -- Estimated max memory usage for replay buffer is 162.3048 GB (8333.333333333334 batches of size 3000, 19476576 bytes each), available system memory is 270.108901376 GB
+2026-05-22 22:35:57,783	ERROR trial_runner.py:924 -- Trial QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000: Error processing event.
+Traceback (most recent call last):
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/tune/trial_runner.py", line 890, in _process_trial
+    results = self.trial_executor.fetch_result(trial)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/tune/ray_trial_executor.py", line 788, in fetch_result
+    result = ray.get(trial_future[0], timeout=DEFAULT_GET_TIMEOUT)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/worker.py", line 1625, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(RuntimeError): [36mray::QMIX.train()[39m (pid=990076, ip=172.24.0.2, repr=QMIX)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/rllib/agents/trainer.py", line 682, in train
+    raise e
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/rllib/agents/trainer.py", line 668, in train
+    result = Trainable.train(self)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/tune/trainable.py", line 283, in train
+    result = self.step()
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/rllib/agents/trainer_template.py", line 206, in step
+    step_results = next(self.train_exec_impl)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 756, in __next__
+    return next(self.built_iterator)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 783, in apply_foreach
+    for item in it:
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 843, in apply_filter
+    for item in it:
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 843, in apply_filter
+    for item in it:
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 783, in apply_foreach
+    for item in it:
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 843, in apply_filter
+    for item in it:
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 1075, in build_union
+    item = next(it)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 756, in __next__
+    return next(self.built_iterator)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 783, in apply_foreach
+    for item in it:
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 783, in apply_foreach
+    for item in it:
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/util/iter.py", line 791, in apply_foreach
+    result = fn(item)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/rllib/execution/train_ops.py", line 95, in __call__
+    self.workers.local_worker().learn_on_batch(batch)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/rllib/evaluation/rollout_worker.py", line 958, in learn_on_batch
+    info_out[pid] = policy.learn_on_batch(batch)
+  File "/workspace/MARLlib/marllib/marl/algos/core/VD/iql_vdn_qmix.py", line 402, in learn_on_batch
+    self.loss(rewards, actions, terminated, mask, obs, next_obs,
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/workspace/MARLlib/marllib/marl/algos/core/VD/iql_vdn_qmix.py", line 109, in forward
+    mac_out = _unroll_mac(self.model, whole_obs)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/rllib/agents/qmix/qmix_policy.py", line 562, in _unroll_mac
+    q, h = _mac(model, obs_tensor[:, t], h)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/rllib/agents/qmix/qmix_policy.py", line 548, in _mac
+    q_flat, h_flat = model(obs_agents_as_batches, h_flat, None)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/rllib/models/modelv2.py", line 243, in __call__
+    res = self.forward(restored, state or [], seq_lens)
+  File "/workspace/MARLlib/marllib/marl/models/zoo/rnn/jointQ_rnn.py", line 85, in forward
+    h = self.rnn(x, h_in)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/torch/nn/modules/rnn.py", line 1144, in forward
+    return _VF.gru_cell(
+RuntimeError: CUDA out of memory. Tried to allocate 18.00 MiB (GPU 0; 23.56 GiB total capacity; 21.44 GiB already allocated; 5.00 MiB free; 21.46 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+== Status ==
+Current time: 2026-05-22 22:35:35 (running for 00:00:52.77)
+Memory usage on this node: 64.5/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:40 (running for 00:00:57.77)
+Memory usage on this node: 64.4/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:45 (running for 00:01:02.78)
+Memory usage on this node: 64.5/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:50 (running for 00:01:07.78)
+Memory usage on this node: 71.2/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:55 (running for 00:01:12.79)
+Memory usage on this node: 71.9/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 7.0/8 CPUs, 1.0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 RUNNING)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | RUNNING  | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+
+
+== Status ==
+Current time: 2026-05-22 22:35:57 (running for 00:01:15.47)
+Memory usage on this node: 64.6/251.6 GiB
+Using FIFO scheduling algorithm.
+Resources requested: 0/8 CPUs, 0/1 GPUs, 0.0/17.55 GiB heap, 0.0/8.78 GiB objects (0.0/1.0 accelerator_type:G)
+Result logdir: /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2
+Number of trials: 1/1 (1 ERROR)
++------------------------------------------------------+----------+-------------------+
+| Trial name                                           | status   | loc               |
+|------------------------------------------------------+----------+-------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 | ERROR    | 172.24.0.2:990076 |
++------------------------------------------------------+----------+-------------------+
+Number of errored trials: 1
++------------------------------------------------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Trial name                                           |   # failures | error file                                                                                                                                                                     |
+|------------------------------------------------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000 |            1 | /workspace/MARLlib/runs/rware_mappo_gru_small_20m_tensorboard/qmix_gru_rware-small-4ag-v2/QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000_0_2026-05-22_22-34-42/error.txt |
++------------------------------------------------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Traceback (most recent call last):
+  File "scripts/train_rware_qmix.py", line 187, in <module>
+    main()
+  File "scripts/train_rware_qmix.py", line 168, in main
+    qmix.fit(
+  File "/workspace/MARLlib/marllib/marl/__init__.py", line 314, in fit
+    return run_vd(self.config_dict, env_instance, model_class, stop=stop)
+  File "/workspace/MARLlib/marllib/marl/algos/run_vd.py", line 208, in run_vd
+    results = POlICY_REGISTRY[exp_info["algorithm"]](model, exp_info, run_config, env_info, stop_config,
+  File "/workspace/MARLlib/marllib/marl/algos/scripts/vdn_qmix_iql.py", line 118, in run_joint_q
+    results = tune.run(JQTrainer,
+  File "/workspace/miniconda3/envs/marllib/lib/python3.8/site-packages/ray/tune/tune.py", line 624, in run
+    raise TuneError("Trials did not complete", incomplete_trials)
+ray.tune.error.TuneError: ('Trials did not complete', [QMIX_grouped_rware_v2_rware-small-4ag-v2_6d071_00000])

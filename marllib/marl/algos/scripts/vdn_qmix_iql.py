@@ -91,7 +91,7 @@ def run_joint_q(model: Any, exp: Dict, run: Dict, env: Dict,
             "train_batch_size": train_batch_episode,  # in sequence
             "target_network_update_freq": episode_limit * target_network_update_frequency,  # in timesteps
             "learning_starts": episode_limit * train_batch_episode,
-            "lr": lr if restore is None else 1e-10,
+            "lr": lr,
             "exploration_config": {
                 "type": "EpsilonGreedy",
                 "initial_epsilon": 1.0,
