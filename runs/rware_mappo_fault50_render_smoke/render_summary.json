@@ -1,0 +1,22 @@
+[
+  {
+    "model": "base_mappo_40m",
+    "episode": 1,
+    "fault_active": false,
+    "broken_agent": "none",
+    "return": 5.0,
+    "steps": 500,
+    "frames": 251,
+    "video": "/workspace/MARLlib/runs/rware_mappo_fault50_render_smoke/base_mappo_40m/base_mappo_40m_ep01_normal_return5.mp4"
+  },
+  {
+    "model": "robust_mappo_fault50",
+    "episode": 1,
+    "fault_active": false,
+    "broken_agent": "none",
+    "return": 4.0,
+    "steps": 500,
+    "frames": 251,
+    "video": "/workspace/MARLlib/runs/rware_mappo_fault50_render_smoke/robust_mappo_fault50/robust_mappo_fault50_ep01_normal_return4.mp4"
+  }
+]
