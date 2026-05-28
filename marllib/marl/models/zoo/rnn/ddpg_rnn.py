@@ -141,13 +141,12 @@ class DDPGSeriesRNN(TorchRNN, nn.Module):
         obs_inputs = input_dict["obs"]["obs"].float()
         if isinstance(seq_lens, np.ndarray):
             seq_lens = torch.Tensor(seq_lens).int()
-        max_seq_len = obs_inputs.shape[0] // seq_lens.shape[0]
 
         self.time_major = self.model_config.get("_time_major", False)
 
         obs_inputs = add_time_dimension(
             obs_inputs,
-            max_seq_len=max_seq_len,
+            seq_lens=seq_lens,
             framework="torch",
             time_major=self.time_major,
         )
@@ -156,7 +155,7 @@ class DDPGSeriesRNN(TorchRNN, nn.Module):
             state_inputs = input_dict["state"].float()
             state_inputs = add_time_dimension(
                 state_inputs,
-                max_seq_len=max_seq_len,
+                seq_lens=seq_lens,
                 framework="torch",
                 time_major=self.time_major,
             )
@@ -167,7 +166,7 @@ class DDPGSeriesRNN(TorchRNN, nn.Module):
             opp_action_inputs = input_dict["opponent_actions"].float()
             opp_action_inputs = add_time_dimension(
                 opp_action_inputs,
-                max_seq_len=max_seq_len,
+                seq_lens=seq_lens,
                 framework="torch",
                 time_major=self.time_major,
             )
@@ -178,7 +177,7 @@ class DDPGSeriesRNN(TorchRNN, nn.Module):
             action_inputs = input_dict["actions"].float()
             action_inputs = add_time_dimension(
                 action_inputs,
-                max_seq_len=max_seq_len,
+                seq_lens=seq_lens,
                 framework="torch",
                 time_major=self.time_major,
             )

@@ -80,7 +80,7 @@ class RLlibVoltageControl(MultiAgentEnv):
         env_config["map_name"] = net_topology
         self.env_config = env_config
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         o, s = self.env.reset()
         obs = {}
         for index, agent in enumerate(self.agents):

@@ -59,7 +59,7 @@ class RLlibMATE_FCOOP(MultiAgentEnv):
         env_config["map_name"] = map
         self.env_config = env_config
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_obs = self.env.reset()
         obs = {}
         for i, name in enumerate(self.agents):

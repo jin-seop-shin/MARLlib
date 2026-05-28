@@ -204,7 +204,7 @@ def link_with_other_agents(current_policy, agent_num, sample_batches, other_agen
 def collect_opponent_array(other_agent_batches: dict, opponent_agents_num, sample_batch):
     assert other_agent_batches is not None
     opponent_batch_list = list(other_agent_batches.values())
-    raw_opponent_batch = [opponent_batch_list[i][1] for i in range(opponent_agents_num)]
+    raw_opponent_batch = [opponent_batch_list[i][-1] for i in range(opponent_agents_num)]
 
     opponent_batch = []
 

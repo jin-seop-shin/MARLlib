@@ -37,13 +37,15 @@ class DiscretizeActionWrapper(gym.ActionWrapper):
         super().__init__(env)
         self.action_key = action_key
         self.discrete_to_continuous_act_map = []
-        for i, ac_space in enumerate(self.action_space.spaces[action_key].spaces):
+        _spaces = list(self.action_space.spaces[action_key].spaces)
+        for i, ac_space in enumerate(_spaces):
             assert isinstance(ac_space, Box)
             action_map = np.array([np.linspace(low, high, nbuckets)
                                    for low, high in zip(ac_space.low, ac_space.high)])
             _nbuckets = np.ones((len(action_map))) * nbuckets
-            self.action_space.spaces[action_key].spaces[i] = gym.spaces.MultiDiscrete(_nbuckets)
+            _spaces[i] = gym.spaces.MultiDiscrete(_nbuckets)
             self.discrete_to_continuous_act_map.append(action_map)
+        self.action_space.spaces[action_key].spaces = tuple(_spaces)
         self.discrete_to_continuous_act_map = np.array(self.discrete_to_continuous_act_map)
 
     def action(self, action):

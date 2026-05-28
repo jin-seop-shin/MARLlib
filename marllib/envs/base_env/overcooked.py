@@ -61,7 +61,7 @@ class RLlibOverCooked(MultiAgentEnv):
         self.agents = ["agent_{}".format(i) for i in range(self.num_agents)]
         self.env_config = env_config
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         o = self.env.reset()
         obs = {}
         for i, agent in enumerate(self.agents):

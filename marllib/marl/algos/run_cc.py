@@ -24,6 +24,7 @@ import ray
 import gym
 from ray import tune
 from ray.rllib.utils.framework import try_import_tf, try_import_torch
+from ray.rllib.policy.policy import PolicySpec
 from marllib.marl.algos.scripts import POlICY_REGISTRY
 from marllib.marl.common import recursive_dict_update, dict_update
 
@@ -105,7 +106,12 @@ def run_cc(exp_info, env, model, stop=None):
     if exp_info["share_policy"] == "all":
         if not policy_mapping_info["all_agents_one_policy"]:
             raise ValueError("in {}, policy can not be shared, change it to 1. group 2. individual".format(map_name))
-        policies = {shared_policy_name}
+        policies = {
+            shared_policy_name: PolicySpec(
+                observation_space=env_info["space_obs"],
+                action_space=env_info["space_act"],
+            )
+        }
         policy_mapping_fn = (
             lambda agent_id, episode, **kwargs: shared_policy_name)
 
@@ -117,14 +123,21 @@ def run_cc(exp_info, env, model, stop=None):
                 raise ValueError(
                     "in {}, policy can not be shared, change it to 1. group 2. individual".format(map_name))
 
-            policies = {shared_policy_name}
+            policies = {
+                shared_policy_name: PolicySpec(
+                    observation_space=env_info["space_obs"],
+                    action_space=env_info["space_act"],
+                )
+            }
             policy_mapping_fn = (
                 lambda agent_id, episode, **kwargs: shared_policy_name)
 
         else:
             policies = {
-                "policy_{}".format(i): (None, env_info["space_obs"], env_info["space_act"], {}) for i in
-                groups
+                "policy_{}".format(i): PolicySpec(
+                    observation_space=env_info["space_obs"],
+                    action_space=env_info["space_act"],
+                ) for i in groups
             }
             policy_ids = list(policies.keys())
             policy_mapping_fn = tune.function(
@@ -135,8 +148,10 @@ def run_cc(exp_info, env, model, stop=None):
             raise ValueError("in {}, agent number too large, we disable no sharing function".format(map_name))
 
         policies = {
-            "policy_{}".format(i): (None, env_info["space_obs"], env_info["space_act"], {}) for i in
-            range(env_info["num_agents"])
+            "policy_{}".format(i): PolicySpec(
+                observation_space=env_info["space_obs"],
+                action_space=env_info["space_act"],
+            ) for i in range(env_info["num_agents"])
         }
         policy_ids = list(policies.keys())
         policy_mapping_fn = tune.function(
@@ -151,8 +166,10 @@ def run_cc(exp_info, env, model, stop=None):
             raise ValueError("in {}, agent number too large, we disable no sharing function".format(map_name))
 
         policies = {
-            "policy_{}".format(i): (None, env_info["space_obs"], env_info["space_act"], {}) for i in
-            range(env_info["num_agents"])
+            "policy_{}".format(i): PolicySpec(
+                observation_space=env_info["space_obs"],
+                action_space=env_info["space_act"],
+            ) for i in range(env_info["num_agents"])
         }
         policy_ids = list(policies.keys())
         policy_mapping_fn = tune.function(

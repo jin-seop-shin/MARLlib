@@ -110,7 +110,7 @@ class RLlibMAMujoco(MultiAgentEnv):
         self.agents = ["agent_{}".format(i) for i in range(self.num_agents)]
 
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         self.env.reset()
         o = self.env.get_obs()  # obs
         s = self.env.get_state()  # g state

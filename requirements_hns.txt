@@ -1,0 +1,22 @@
+# HNS (Hide-and-Seek) + MAPPO + LSTM 학습에 필요한 패키지
+# Python 3.11, Ray 2.3.0 기준
+
+# MuJoCo Python bindings (MuJoCo 2.1.0 필요)
+mujoco-py>=2.1.2.14
+
+# Cython 3.x가 mujoco-py 2.x 컴파일과 충돌하므로 2.x 고정
+Cython<3
+
+# mujoco_worldgen (번들된 패키지) 의존성
+xmltodict
+jsonnet
+numpy-stl
+
+# Ray 2.3.0은 pydantic v2와 충돌
+pydantic<2
+
+# gym 0.26+ API는 HNS wrapper와 비호환 (reset/step 반환값 형식 변경)
+gym==0.22.0
+
+# TensorBoard
+tensorboard

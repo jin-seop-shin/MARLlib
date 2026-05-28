@@ -48,7 +48,7 @@ class RLlibCloseAirCombatEnv(MultiAgentEnv):
             self.agents_teamB = ["teamB_{}".format(i) for i in range(self.teamB_agent_num)]
             self.agents = self.agents_teamA + self.agents_teamB
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_obs, _ = self.env.reset()
         obs = {}
         if "vsBaseline" in self.env_args["map_name"]:

@@ -20,18 +20,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from ray.rllib.agents.ppo.ppo_torch_policy import PPOTorchPolicy
-from ray.rllib.agents.ppo.ppo import PPOTrainer as PPOTrainer, DEFAULT_CONFIG as PPO_CONFIG
+from ray.rllib.algorithms.ppo.ppo_torch_policy import PPOTorchPolicy
+from ray.rllib.algorithms.ppo.ppo import PPO as PPOTrainer, DEFAULT_CONFIG as PPO_CONFIG
 
 ###########
 ### PPO ###
 ###########
 
-
-IPPOTorchPolicy = PPOTorchPolicy.with_updates(
-    name="IPPOTorchPolicy",
-    get_default_config=lambda: PPO_CONFIG,
-)
+IPPOTorchPolicy = PPOTorchPolicy
 
 
 def get_policy_class_ppo(config_):
@@ -39,8 +35,7 @@ def get_policy_class_ppo(config_):
         return IPPOTorchPolicy
 
 
-IPPOTrainer = PPOTrainer.with_updates(
-    name="IPPOTrainer",
-    default_policy=None,
-    get_policy_class=get_policy_class_ppo,
-)
+class IPPOTrainer(PPOTrainer):
+    @classmethod
+    def get_default_policy_class(cls, config):
+        return get_policy_class_ppo(config)

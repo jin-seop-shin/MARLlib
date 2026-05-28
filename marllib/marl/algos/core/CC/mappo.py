@@ -20,14 +20,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from ray.rllib.agents.ppo.ppo_torch_policy import PPOTorchPolicy, KLCoeffMixin, ppo_surrogate_loss
-from ray.rllib.agents.ppo.ppo import PPOTrainer, DEFAULT_CONFIG as PPO_CONFIG
+from ray.rllib.algorithms.ppo.ppo_torch_policy import PPOTorchPolicy, KLCoeffMixin
+from ray.rllib.algorithms.ppo.ppo import PPO as PPOTrainer, DEFAULT_CONFIG as PPO_CONFIG
 from ray.rllib.models.action_dist import ActionDistribution
 import gym
 from ray.rllib.models.modelv2 import ModelV2
 from ray.rllib.policy.policy import Policy
 from ray.rllib.policy.sample_batch import SampleBatch
-from ray.rllib.policy.torch_policy import EntropyCoeffSchedule, \
+from ray.rllib.policy.torch_mixins import EntropyCoeffSchedule, \
     LearningRateSchedule
 from ray.rllib.utils.typing import TensorType, TrainerConfigDict
 from marllib.marl.algos.utils.centralized_critic import CentralizedValueMixin, centralized_critic_postprocessing
@@ -52,7 +52,6 @@ def central_critic_ppo_loss(policy: Policy, model: ModelV2,
             of loss tensors.
     """
     CentralizedValueMixin.__init__(policy)
-    func = ppo_surrogate_loss
 
     vf_saved = model.value_function
     opp_action_in_cc = policy.config["model"]["custom_model_config"]["opp_action_in_cc"]
@@ -61,23 +60,33 @@ def central_critic_ppo_loss(policy: Policy, model: ModelV2,
                                                                            "opponent_actions"] if opp_action_in_cc else None)
 
     policy._central_value_out = model.value_function()
-    loss = func(policy, model, dist_class, train_batch)
+    # Call PPOTorchPolicy.loss directly (replaces removed ppo_surrogate_loss)
+    loss = PPOTorchPolicy.loss(policy, model, dist_class, train_batch)
 
     model.value_function = vf_saved
 
     return loss
 
 
-MAPPOTorchPolicy = PPOTorchPolicy.with_updates(
-    name="MAPPOTorchPolicy",
-    get_default_config=lambda: PPO_CONFIG,
-    postprocess_fn=centralized_critic_postprocessing,
-    loss_fn=central_critic_ppo_loss,
-    before_init=setup_torch_mixins,
-    mixins=[
-        LearningRateSchedule, EntropyCoeffSchedule, KLCoeffMixin,
-        CentralizedValueMixin
-    ])
+class MAPPOTorchPolicy(CentralizedValueMixin, PPOTorchPolicy):
+    """MAPPO policy: PPO with centralized critic.
+
+    PPOTorchPolicy in Ray 2.x already inherits LearningRateSchedule,
+    EntropyCoeffSchedule, KLCoeffMixin, and ValueNetworkMixin, so we only
+    add CentralizedValueMixin on top.
+    """
+
+    def __init__(self, observation_space, action_space, config):
+        PPOTorchPolicy.__init__(self, observation_space, action_space, config)
+        CentralizedValueMixin.__init__(self)
+
+    def loss(self, model, dist_class, train_batch):
+        return central_critic_ppo_loss(self, model, dist_class, train_batch)
+
+    def postprocess_trajectory(self, sample_batch, other_agent_batches=None,
+                               episode=None):
+        return centralized_critic_postprocessing(
+            self, sample_batch, other_agent_batches, episode)
 
 
 def get_policy_class_mappo(config_):
@@ -85,8 +94,9 @@ def get_policy_class_mappo(config_):
         return MAPPOTorchPolicy
 
 
-MAPPOTrainer = PPOTrainer.with_updates(
-    name="MAPPOTrainer",
-    default_policy=None,
-    get_policy_class=get_policy_class_mappo,
-)
+class MAPPOTrainer(PPOTrainer):
+    """MAPPO trainer: PPO with centralized critic."""
+
+    @classmethod
+    def get_default_policy_class(cls, config):
+        return get_policy_class_mappo(config)

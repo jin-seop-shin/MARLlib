@@ -32,7 +32,7 @@ class RLlibMAgent_FCOOP(RLlibMAgent):
             raise ValueError("must in: 1.gather")
         super().__init__(env_config)
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_obs = self.env.reset()
         obs = {}
         for key in original_obs.keys():

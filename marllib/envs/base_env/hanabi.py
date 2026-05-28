@@ -50,7 +50,7 @@ class RLlibHanabi(MultiAgentEnv):
         self.agents = ["agent_{}".format(i) for i in range(self.num_agents)]
         self.env_config = env_config
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         o, s, action_mask = self.env.reset()
         agent_flag = list(s[-self.num_agents:]).index(1)
         obs = {}

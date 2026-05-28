@@ -109,7 +109,7 @@ class RLlibPommerman(MultiAgentEnv):
         self.rule_agent = rule_agent_pos
         self.map = map
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_all_state = self.env.reset()
         self.state_store = original_all_state
         state = {}

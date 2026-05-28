@@ -87,7 +87,7 @@ class RLlibGymnasiumRoboticsMAMujoco(MultiAgentEnv):
         self.agents = ["agent_{}".format(i) for i in range(self.num_agents)]
         self.step_count = 0
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         self.step_count = 0
         o = self.env.reset()
         s = self.env.state()

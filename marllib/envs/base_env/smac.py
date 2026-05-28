@@ -56,7 +56,7 @@ class RLlibSMAC(MultiAgentEnv):
         })
         self.action_space = Discrete(n_actions)
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         self.env.reset()
         obs_smac = self.env.get_obs()
         state_smac = self.env.get_state()

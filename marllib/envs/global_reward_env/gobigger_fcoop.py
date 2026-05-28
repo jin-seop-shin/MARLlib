@@ -83,7 +83,7 @@ class RLlibGoBigger_FCOOP(MultiAgentEnv):
         env_config["map_name"] = map_name
         self.env_config = env_config
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_obs = self.env.reset()
         obs = {}
         for agent_index, agent_name in enumerate(self.agents):

@@ -72,7 +72,7 @@ class RLlibGFootball(MultiAgentEnv):
         # back to be compatible in run script
         env_config["map_name"] = env_config.pop("env_name")
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_obs = self.env.reset()
         obs = {}
         for x in range(self.num_agents):

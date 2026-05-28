@@ -32,7 +32,7 @@ policy_mapping_dict = {
     "all_scenario": {
         "description": "hide and seek all scenarios",
         "team_prefix": ("agent_",),
-        "all_agents_one_policy": False,
+        "all_agents_one_policy": True,
         "one_agent_one_policy": True,
     },
 }
@@ -91,8 +91,8 @@ class RLlibHideAndSeek(MultiAgentEnv):
         self.action_space = action_space
         self.ori_obs_space = obs_space
         self.observation_space = GymDict({"obs": Box(
-            low=-100.0,
-            high=100.0,
+            low=-np.inf,
+            high=np.inf,
             shape=(obs_dim,),
             dtype=np.float32)})
         self.agents = ["agent_{}".format(i) for i in range(self.num_agents)]
@@ -100,18 +100,21 @@ class RLlibHideAndSeek(MultiAgentEnv):
         # back to be compatible in run script
         env_config["map_name"] = map_name
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_obs = self.env.reset()
         obs = {}
         for index in range(self.num_agents):
             obs_one_agent = []
             for key in original_obs.keys():
                 if key in self.order_obs_key:
-                    obs_one_agent.append(np.squeeze(np.array(original_obs[key][index], dtype=np.float32)))
+                    obs_one_agent.append(
+                        np.array(original_obs[key][index], dtype=np.float32).flatten()
+                    )
             obs["agent_{}".format(index)] = {
-                "obs": np.hstack(obs_one_agent)
+                "obs": np.concatenate(obs_one_agent)
             }
-        return obs
+        infos = {"agent_{}".format(i): {} for i in range(self.num_agents)}
+        return obs, infos
 
     def step(self, action_dict):
         actions = {}
@@ -142,12 +145,17 @@ class RLlibHideAndSeek(MultiAgentEnv):
             obs_one_agent = []
             for key in o.keys():
                 if key in self.order_obs_key:
-                    obs_one_agent.append(np.squeeze(np.array(o[key][agent_index], dtype=np.float32)))
+                    obs_one_agent.append(
+                        np.array(o[key][agent_index], dtype=np.float32).flatten()
+                    )
             obs[agent_name] = {
-                "obs": np.hstack(obs_one_agent)
+                "obs": np.concatenate(obs_one_agent)
             }
-        dones = {"__all__": d}
-        return obs, rewards, dones, {}
+        # Ray 2.x requires separated terminated / truncated dicts
+        terminateds = {"__all__": bool(d)}
+        truncateds  = {"__all__": False}
+        infos = {"agent_{}".format(i): {} for i in range(self.num_agents)}
+        return obs, rewards, terminateds, truncateds, infos
 
     def close(self):
         self.env.close()

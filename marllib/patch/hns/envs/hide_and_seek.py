@@ -151,7 +151,8 @@ class HideAndSeekRewardWrapper(gym.Wrapper):
 
         this_rew *= self.reward_scale
         rew += this_rew
-        info['success_rate'] = max((rew[self.n_hiders:] / self.n_seekers / self.reward_scale),0.0)
+        import numpy as _np
+        info['success_rate'] = float(_np.maximum(rew[self.n_hiders:] / self.n_seekers / self.reward_scale, 0.0).mean())
         return obs, rew, done, info
 
 

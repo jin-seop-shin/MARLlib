@@ -16,7 +16,10 @@ def get_size_from_xml(obj):
     if outer_bound is None:
         return None
     else:
-        return outer_bound['geom'][0]['@size'][:2] * 2
+        geom = outer_bound['geom']
+        if isinstance(geom, dict):
+            geom = [geom]
+        return geom[0]['@size'][:2] * 2
 
 
 def rejection_placement(env, placement_fn, floor_size, obj_size, num_tries=10):

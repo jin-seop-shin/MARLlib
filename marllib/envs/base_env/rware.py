@@ -75,7 +75,7 @@ class RLlibRWARE(MultiAgentEnv):
 
         self.env_config = env_config
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_obs = self.env.reset()
         obs = {}
         for x in range(self.num_agents):

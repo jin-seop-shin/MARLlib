@@ -213,7 +213,7 @@ class Obj(object):
         '''
         assert hasattr(transform, "__call__"), \
             "Argument to add_transform should be a function"
-        assert len(inspect.getargspec(transform).args) == 1, \
+        assert len(inspect.getfullargspec(transform).args) == 1, \
             "transform function should take a single argument " + \
             "of a type OrderedDict. This argument represents " + \
             "xml to be transformed."

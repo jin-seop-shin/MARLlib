@@ -20,41 +20,49 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from .vda2c import run_vda2c
-from .vdppo import run_vdppo
-from .vdn_qmix_iql import run_joint_q
-from .maa2c import run_maa2c
-from .mappo import run_mappo
-from .coma import run_coma
-from .ia2c import run_ia2c
-from .ippo import run_ippo
-from .iddpg import run_iddpg
-from .maddpg import run_maddpg
-from .facmac import run_facmac
-from .happo import run_happo
-from .itrpo import run_itrpo
-from .hatrpo import run_hatrpo
-from .matrpo import run_matrpo
+def _try_import(module_path, symbol):
+    try:
+        mod = __import__(module_path, fromlist=[symbol])
+        return getattr(mod, symbol, None)
+    except Exception:
+        return None
+
+run_vda2c   = _try_import("marllib.marl.algos.scripts.vda2c",        "run_vda2c")
+run_vdppo   = _try_import("marllib.marl.algos.scripts.vdppo",        "run_vdppo")
+run_joint_q = _try_import("marllib.marl.algos.scripts.vdn_qmix_iql", "run_joint_q")
+run_maa2c   = _try_import("marllib.marl.algos.scripts.maa2c",        "run_maa2c")
+run_coma    = _try_import("marllib.marl.algos.scripts.coma",          "run_coma")
+run_ia2c    = _try_import("marllib.marl.algos.scripts.ia2c",          "run_ia2c")
+run_iddpg   = _try_import("marllib.marl.algos.scripts.iddpg",         "run_iddpg")
+run_maddpg  = _try_import("marllib.marl.algos.scripts.maddpg",        "run_maddpg")
+run_facmac  = _try_import("marllib.marl.algos.scripts.facmac",        "run_facmac")
+run_happo   = _try_import("marllib.marl.algos.scripts.happo",         "run_happo")
+run_itrpo   = _try_import("marllib.marl.algos.scripts.itrpo",         "run_itrpo")
+run_hatrpo  = _try_import("marllib.marl.algos.scripts.hatrpo",        "run_hatrpo")
+run_matrpo  = _try_import("marllib.marl.algos.scripts.matrpo",        "run_matrpo")
+
+from .ippo  import run_ippo   # noqa: E402
+from .mappo import run_mappo  # noqa: E402
 
 
 POlICY_REGISTRY = {
-    "ia2c": run_ia2c,
-    "ippo": run_ippo,
-    "iql": run_joint_q,
-    "qmix": run_joint_q,
-    "vdn": run_joint_q,
-    "vda2c": run_vda2c,
-    "vdppo": run_vdppo,
-    "maa2c": run_maa2c,
-    "mappo": run_mappo,
-    "coma": run_coma,
-    "iddpg": run_iddpg,
+    "ia2c":   run_ia2c,
+    "ippo":   run_ippo,
+    "iql":    run_joint_q,
+    "qmix":   run_joint_q,
+    "vdn":    run_joint_q,
+    "vda2c":  run_vda2c,
+    "vdppo":  run_vdppo,
+    "maa2c":  run_maa2c,
+    "mappo":  run_mappo,
+    "coma":   run_coma,
+    "iddpg":  run_iddpg,
     "maddpg": run_maddpg,
     "facmac": run_facmac,
-    'happo': run_happo,
-    'itrpo': run_itrpo,
-    'hatrpo': run_hatrpo,
-    'matrpo': run_matrpo
+    "happo":  run_happo,
+    "itrpo":  run_itrpo,
+    "hatrpo": run_hatrpo,
+    "matrpo": run_matrpo,
 }
 
 

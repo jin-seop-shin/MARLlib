@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from ray.rllib.utils.torch_ops import FLOAT_MIN
+from ray.rllib.utils.torch_utils import FLOAT_MIN
 import numpy as np
 from typing import Dict, List
 from ray.rllib.models.modelv2 import ModelV2
@@ -140,12 +140,11 @@ class BaseRNN(TorchRNN, nn.Module):
 
         if isinstance(seq_lens, np.ndarray):
             seq_lens = torch.Tensor(seq_lens).int()
-        max_seq_len = flat_inputs.shape[0] // seq_lens.shape[0]
 
         self.time_major = self.model_config.get("_time_major", False)
         inputs = add_time_dimension(
             flat_inputs,
-            max_seq_len=max_seq_len,
+            seq_lens=seq_lens,
             framework="torch",
             time_major=self.time_major,
         )

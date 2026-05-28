@@ -23,7 +23,7 @@
 import numpy as np
 from ray.rllib.evaluation.postprocessing import compute_advantages
 from ray.rllib.utils.framework import try_import_torch
-from ray.rllib.utils.torch_ops import convert_to_torch_tensor
+from ray.rllib.utils.torch_utils import convert_to_torch_tensor
 from ray.rllib.policy.sample_batch import SampleBatch
 from marllib.marl.algos.utils.centralized_Q import get_dim
 from marllib.marl.algos.utils.mixing_Q import align_batch
@@ -77,7 +77,9 @@ def centralized_critic_postprocessing(policy,
         else:  # need opponent info
             assert other_agent_batches is not None
             opponent_batch_list = list(other_agent_batches.values())
-            raw_opponent_batch = [opponent_batch_list[i][1] for i in range(opponent_agents_num)]
+            # Ray 2.x: tuple is (policy_id, policy, batch); Ray 1.x: (policy, batch)
+            # Using [-1] works for both formats since batch is always the last element.
+            raw_opponent_batch = [opponent_batch_list[i][-1] for i in range(opponent_agents_num)]
             opponent_batch = []
             for one_opponent_batch in raw_opponent_batch:
                 one_opponent_batch = align_batch(one_opponent_batch, sample_batch)

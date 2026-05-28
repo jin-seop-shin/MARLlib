@@ -22,7 +22,7 @@
 
 from ray.rllib.evaluation.postprocessing import compute_advantages
 from ray.rllib.utils.framework import try_import_torch
-from ray.rllib.utils.torch_ops import convert_to_torch_tensor
+from ray.rllib.utils.torch_utils import convert_to_torch_tensor
 from copy import deepcopy
 from ray.rllib.policy.sample_batch import SampleBatch
 from ray.rllib.utils.numpy import convert_to_numpy
@@ -70,7 +70,7 @@ def value_mixing_postprocessing(policy,
             (not pytorch and policy.loss_initialized()):
         assert other_agent_batches is not None
         opponent_batch_list = list(other_agent_batches.values())
-        raw_opponent_batch = [opponent_batch_list[i][1] for i in range(opponent_agents_num)]
+        raw_opponent_batch = [opponent_batch_list[i][-1] for i in range(opponent_agents_num)]
         opponent_batch = []
         for one_opponent_batch in raw_opponent_batch:
             one_opponent_batch = align_batch(one_opponent_batch, sample_batch)

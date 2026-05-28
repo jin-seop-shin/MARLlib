@@ -20,10 +20,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from ray.rllib.agents.ppo.ppo_torch_policy import KLCoeffMixin
+from ray.rllib.algorithms.ppo.ppo_torch_policy import KLCoeffMixin
 import gym
 from ray.rllib.policy.policy import Policy
-from ray.rllib.policy.torch_policy import EntropyCoeffSchedule, \
+from ray.rllib.policy.torch_mixins import EntropyCoeffSchedule, \
     LearningRateSchedule
 from ray.rllib.utils.typing import TrainerConfigDict
 

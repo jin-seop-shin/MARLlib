@@ -9,7 +9,7 @@ class RLlibCloseAirCombatEnv_FCOOP(RLlibCloseAirCombatEnv):
         if "vsBaseline" not in self.env_args["map_name"]:
             raise ValueError(self.env_args["map_name"] + "is not in cooperative mode")
 
-    def reset(self):
+    def reset(self, seed=None, options=None):
         original_obs, _ = self.env.reset()
         obs = {}
         for index, agent in enumerate(self.agents):
